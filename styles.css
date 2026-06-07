@@ -1041,6 +1041,9 @@ ul { list-style: none; }
   .fab-whatsapp { bottom: 5rem; }
   /* Add padding so content isn't behind call bar */
   body { padding-bottom: 56px; }
+
+  .seo-inner { padding: 1.5rem; gap: 1rem; }
+  .seo-text h2 { font-size: 1rem; }
 }
 
 @media (max-width: 480px) {
@@ -1048,4 +1051,64 @@ ul { list-style: none; }
   .contact-actions { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }
+  .seo-btn { width: 100%; text-align: center; }
+}
+
+/* ============================================================
+   SEO SECTION
+   ============================================================ */
+.seo-section {
+  background: var(--black-mid);
+  border-top: 1px solid rgba(208, 0, 10, 0.2);
+  border-bottom: 1px solid rgba(208, 0, 10, 0.2);
+  padding: 3rem 0;
+}
+
+.seo-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  background: rgba(208, 0, 10, 0.05);
+  border: 1px solid rgba(208, 0, 10, 0.15);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+}
+
+.seo-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.seo-text h2 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--red);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seo-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.seo-text p {
+  font-size: 0.9rem;
+  color: var(--gray-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.seo-btn {
+  flex-shrink: 0;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  padding-left: 2rem;
+  margin-left: 0.5rem;
 }
