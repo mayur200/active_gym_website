@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet Our Expert Trainers | Active Gym Goregaon East, Mumbai</title>
+  <meta name="description" content="Meet the expert fitness coaches and personal trainers at Active Gym, Goregaon East Mumbai. Explore trainer specializations, experience, certifications, and book a training session." />
+  
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon-512.png" />
+  <meta name="theme-color" content="#ff4500" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts: Bebas Neue (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== STICKY NAVBAR ========== -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="index.html#home" class="nav-logo">
+        <span class="logo-active">ACTIVE</span><span class="logo-gym">GYM</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="trainer-details.html" class="active-link">Trainers</a></li>
+        <li><a href="index.html#membership">Membership</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#instagram">Gallery</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#location">Location</a></li>
+        <li><a href="index.html#contact" class="nav-cta">Join Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ========== MAIN CONTENT AREA ========== -->
+  <main class="trainer-page-container">
+    
+    <!-- Section Title -->
+    <section class="trainer-details-hero">
+      <div class="container">
+        <p class="section-eyebrow">Professional Coaches</p>
+        <h1 class="section-title">Meet Our <span class="accent">Experts</span></h1>
+      </div>
+    </section>
+
+    <!-- Horizontal Trainer Picker Strip -->
+    <section class="trainer-picker-section">
+      <div class="container">
+        <div class="trainer-picker-wrapper">
+          <div class="trainer-picker" id="trainerPicker">
+            <!-- Populated via Javascript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Trainer Details Profile Card -->
+    <section class="trainer-profile-section">
+      <div class="container">
+        <div class="trainer-profile-card transition-fade" id="trainerProfileCard">
+          
+          <!-- Left: Trainer Photo or Placeholder -->
+          <div class="profile-image-col">
+
+            <!-- REAL PHOTO: shown when trainer has an image set in script.js -->
+            <img
+              id="trainerPhoto"
+              src=""
+              alt="Trainer Photo"
+              class="trainer-real-photo"
+              style="display:none;"
+            />
+
+            <!-- PLACEHOLDER: shown when no photo is added yet -->
+            <div class="premium-image-placeholder" id="trainerPhotoPlaceholder">
+              <div class="placeholder-border"></div>
+              <div class="placeholder-content">
+                <svg class="placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span class="placeholder-label">Trainer Photo</span>
+                <span class="placeholder-sublabel">(Image Placeholder)</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Profile Info -->
+          <div class="profile-info-col">
+            <div class="profile-header-group">
+              <span class="profile-designation" id="trainerDesignation">Founder, Active Gym</span>
+              <h2 class="profile-name" id="trainerName">Santosh Singh</h2>
+            </div>
+
+            <!-- Highlights Grid -->
+            <div class="profile-highlights-grid">
+              <div class="highlight-item">
+                <span class="highlight-title">Experience</span>
+                <span class="highlight-value" id="trainerExperience">12+ Years</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-title">Certification</span>
+                <span class="highlight-value" id="trainerCertification">Certified Fitness Professional</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-title">Languages</span>
+                <span class="highlight-value" id="trainerLanguages">Hindi, English</span>
+              </div>
+            </div>
+
+            <!-- Specializations & Training Styles -->
+            <div class="profile-section-block">
+              <h3>Specializations</h3>
+              <div class="tags-container" id="trainerSpecializations">
+                <!-- Tag elements added dynamically -->
+              </div>
+            </div>
+
+            <div class="profile-section-block">
+              <h3>Training Style</h3>
+              <div class="tags-container tags-red" id="trainerStyles">
+                <!-- Tag elements added dynamically -->
+              </div>
+            </div>
+
+            <!-- Biography / About -->
+            <div class="profile-section-block">
+              <h3>Biography</h3>
+              <p class="profile-bio" id="trainerBio">
+                Co-founder of Active Gym, Goregaon East. Built the gym from the ground up with a vision to make quality fitness accessible to everyone...
+              </p>
+            </div>
+
+            <!-- Achievement (Conditional) -->
+            <div class="profile-section-block" id="trainerAchievementBlock">
+              <h3>Key Achievement</h3>
+              <p class="profile-achievement" id="trainerAchievement">
+                Successfully trained hundreds of members and built one of Goregaon's trusted fitness communities.
+              </p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="profile-actions">
+              <a href="#" id="bookSessionBtn" class="btn btn-primary">Book Session</a>
+              <a href="#" id="whatsappBtn" class="btn btn-outline whatsapp-btn-outline" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                Connect on WhatsApp
+              </a>
+              <a href="tel:+919769055740" id="callBtn" class="btn btn-outline">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Call Trainer
+              </a>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="trainer-nav-row">
+              <button class="nav-arrow-btn" id="prevTrainerBtn">
+                <span class="nav-arrow">←</span>
+                <div class="nav-name-label">
+                  <small>Previous Trainer</small>
+                  <strong id="prevTrainerName">Saurabh Jha</strong>
+                </div>
+              </button>
+              <button class="nav-arrow-btn nav-arrow-btn-next" id="nextTrainerBtn">
+                <div class="nav-name-label">
+                  <small>Next Trainer</small>
+                  <strong id="nextTrainerName">Kalim Sayyed</strong>
+                </div>
+                <span class="nav-arrow">→</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo footer-logo"><span class="logo-active">ACTIVE</span><span class="logo-gym">GYM</span></div>
+          <p>Be Active in Life by Fitness</p>
+          <a href="https://www.instagram.com/activegym.in/" target="_blank" rel="noopener" class="footer-ig">@activegym.in</a>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="trainer-details.html">Trainers</a></li>
+            <li><a href="index.html#membership">Membership</a></li>
+            <li><a href="index.html#offers">Offers</a></li>
+            <li><a href="index.html#reviews">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p class="footer-contact-item">
+            <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Film City Road, Goregaon East, Mumbai-400065</span>
+          </p>
+          <p class="footer-contact-item">
+            <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919769055740">+91 9769055740</a>
+          </p>
+          <p class="footer-contact-item">
+            <svg class="footer-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+919619242423">+91 9619242423</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Active Gym. All rights reserved.</p>
+        <p class="footer-credit">Designed &amp; Built by <a href="https://linktr.ee/mayur01" target="_blank" rel="noopener">Mayur</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+  <a href="https://wa.me/919769055740?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Active%20Gym%20membership" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ========== MOBILE CALL BUTTON ========== -->
+  <a href="tel:+919769055740" class="fab-call" aria-label="Call Now">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+    </svg>
+    <span>Call Now</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
