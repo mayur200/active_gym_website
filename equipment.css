@@ -1,0 +1,94 @@
+/* ===== EQUIPMENT PAGE ===== */
+
+/* Stats bar */
+.equip-stats-bar {
+  background: #161616;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 1.75rem 0;
+}
+.equip-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+.equip-stat { padding: 0.75rem; }
+.equip-stat svg { width: 28px; height: 28px; color: var(--red); margin: 0 auto 0.5rem; display: block; }
+.equip-stat strong { display: block; font-size: 1.1rem; color: var(--white); margin-bottom: 0.15rem; font-family: 'Bebas Neue', sans-serif; letter-spacing: 1px; }
+.equip-stat span { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* Equipment grid */
+.equip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Equipment card */
+.equip-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+.equip-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--red);
+  box-shadow: 0 12px 40px rgba(232,25,44,0.1);
+}
+
+/* Image */
+.equip-img-wrap {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+}
+.equip-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.equip-card:hover .equip-img-wrap img { transform: scale(1.07); }
+.equip-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(28,28,28,0.95) 100%);
+}
+.equip-tag-badge {
+  position: absolute;
+  top: 0.75rem; right: 0.75rem;
+  background: rgba(232,25,44,0.85);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.equip-tag-badge.gold { background: rgba(240,165,0,0.85); color: #000; }
+
+/* Body */
+.equip-body { padding: 1.25rem; }
+.equip-icon {
+  width: 40px; height: 40px;
+  background: rgba(232,25,44,0.1);
+  border: 1px solid rgba(232,25,44,0.2);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--red);
+  margin-bottom: 0.75rem;
+}
+.equip-icon.gold {
+  background: rgba(240,165,0,0.1);
+  border-color: rgba(240,165,0,0.2);
+  color: var(--gold);
+}
+.equip-icon svg { width: 18px; height: 18px; }
+.equip-body h3 { font-size: 1rem; color: var(--white); margin-bottom: 0.4rem; }
+.equip-body p { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+@media (max-width: 640px) {
+  .equip-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
