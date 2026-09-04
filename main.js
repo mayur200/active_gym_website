@@ -57,7 +57,7 @@ if (trialForm) {
     const phone = document.getElementById('phone').value.trim();
     const goal  = document.getElementById('goal').value;
     const msg = `Hi, I want to book a free trial at Active Gym!%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AGoal: ${encodeURIComponent(goal || 'Not specified')}`;
-    window.open(`https://wa.me/919920329124?text=${msg}`, '_blank');
+    window.open(`https://wa.me/919769055740?text=${msg}`, '_blank');
   });
 }
 
